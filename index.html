@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmileGroup · Almanca satış sayfası demoları</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="demo/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600&display=swap">
+<style>
+:root{--lacivert:#2C445C;--altin:#A58753;--altin-koyu:#7E6538;--bej:#F3F0EA;--zemin:#FBFAF8;--metin:#545250;--cizgi:rgba(44,68,92,.12)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--metin);font-family:'Host Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.6}
+.sar{width:min(100% - 32px,1180px);margin-inline:auto}
+header{padding:40px 0 8px}
+header img{width:180px;height:auto;display:block}
+h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4vw,3rem);line-height:1.12;font-weight:600;letter-spacing:-.01em}
+.giris{max-width:62ch;font-size:1.0625rem;margin:0}
+.kartlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:44px 0 28px}
+.kart{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cizgi);border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(44,68,92,.4);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.kart:hover{transform:translateY(-4px);box-shadow:0 28px 56px -28px rgba(44,68,92,.5)}
+.kart>a{display:block}
+.kart img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--cizgi)}
+.kart__icerik{display:flex;flex-direction:column;gap:12px;padding:20px 22px 22px;flex:1}
+.kart__no{font-size:.8125rem;font-weight:600;color:var(--altin-koyu)}
+.kart h2{margin:0;color:var(--lacivert);font-size:1.3rem;line-height:1.25;font-weight:600}
+.kart p{margin:0;font-size:.9375rem}
+.dugme{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;min-height:46px;padding:10px 18px;border-radius:999px;background:var(--lacivert);color:#fff;text-decoration:none;font-weight:600;transition:background-color .2s}
+.dugme:hover{background:#1E3245}
+.varyant{display:flex;flex-wrap:wrap;gap:6px;font-size:.8125rem}
+.varyant span{width:100%;color:var(--metin)}
+.varyant a{padding:4px 11px;border-radius:999px;border:1px solid var(--cizgi);color:var(--lacivert);text-decoration:none;background:var(--bej)}
+.varyant a:hover{border-color:var(--altin)}
+.not{margin:0 0 48px;padding:18px 20px;border-radius:16px;background:var(--bej);font-size:.9375rem;max-width:80ch}
+.not b{color:var(--lacivert)}
+@media (max-width:960px){.kartlar{grid-template-columns:1fr;max-width:560px}}
+</style>
+</head>
+<body>
+<header class="sar"><img src="demo/assets/img/logo.svg" alt="SmileGroup" width="180" height="36"></header>
+<main class="sar">
+  <h1>Almanca satış sayfası: üç tasarım önerisi</h1>
+  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Üç ayrı tasarım var. Her biri implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
+  <div class="kartlar">
+    <article class="kart">
+      <a href="demo/" aria-label="Demo 1'i aç"><img src="onizleme/demo-1.webp" alt="Demo 1 açılış ekranı" width="960" height="600"></a>
+      <div class="kart__icerik">
+        <span class="kart__no">Demo 1</span>
+        <h2>Kurumsal ve sihirbazlı</h2>
+        <p>Sitenin lacivert-altın renkleri, açık zemin. Tedavi sihirbazı, Almanya ile fiyat karşılaştırması, 3B süreç sahnesi, tanıtım filmi ve galeri.</p>
+        <div class="varyant"><span>Reklama göre:</span><a href="demo/?t=implantate">İmplant</a><a href="demo/?t=all-on-4">All-on-4</a><a href="demo/?t=aesthetik">Veneer ve zirkon</a></div>
+        <a class="dugme" href="demo/">Demoyu aç</a>
+      </div>
+    </article>
+    <article class="kart">
+      <a href="demo-2/" aria-label="Demo 2'yi aç"><img src="onizleme/demo-2.webp" alt="Demo 2 açılış ekranı" width="960" height="600"></a>
+      <div class="kart__icerik">
+        <span class="kart__no">Demo 2</span>
+        <h2>Gece mavisi ve altın</h2>
+        <p>Koyu, premium tasarım. Girişte hızlı form, fiyat hesaplayıcı, Almanca önce-sonra videosu, tanıtım filmi ve galeri.</p>
+        <div class="varyant"><span>Reklama göre:</span><a href="demo-2/?t=implantate">İmplant</a><a href="demo-2/?t=all-on-4">All-on-4</a><a href="demo-2/?t=aesthetik">Veneer ve zirkon</a></div>
+        <a class="dugme" href="demo-2/">Demoyu aç</a>
+      </div>
+    </article>
+    <article class="kart">
+      <a href="demo-3/" aria-label="Demo 3'ü aç"><img src="onizleme/demo-3.webp" alt="Demo 3 açılış ekranı" width="960" height="600"></a>
+      <div class="kart__icerik">
+        <span class="kart__no">Demo 3</span>
+        <h2>İnci ve holografik</h2>
+        <p>Açık, holografik tasarım. Hareketli plan kartı, tarama çizgili önce-sonra, Berlin'den Şişli'ye 3B yolculuk, tanıtım filmi ve galeri.</p>
+        <div class="varyant"><span>Reklama göre:</span><a href="demo-3/?t=implantate">İmplant</a><a href="demo-3/?t=all-on-4">All-on-4</a><a href="demo-3/?t=aesthetik">Veneer ve zirkon</a></div>
+        <a class="dugme" href="demo-3/">Demoyu aç</a>
+      </div>
+    </article>
+  </div>
+  <p class="not"><b>Not:</b> Fiyatlar örnektir; kliniğin fiyat listesiyle güncellenecek. Formlar ve sihirbaz demo amaçlıdır, girilen bilgiler hiçbir yere gönderilmez. Sayfalar arama motorlarına kapalıdır.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* ===== 3B yolculuk: Berlin → İstanbul → Şişli (reise-3d.js ile) ===== */
+.reise{position:relative;height:540vh;background:linear-gradient(180deg,var(--grund,#FBFAF8) 0%,#F4F1EC 10%,#F4F1EC 90%,var(--grund,#FBFAF8) 100%)}
+.reise__buehne{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate}
+.reise__canvas{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%}
+/* Başlığın okunması için üstte yumuşak zemin; yolculuk başlayınca kaybolur */
+.reise__buehne::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(244,241,236,.94) 0%,rgba(244,241,236,.62) 24%,rgba(244,241,236,0) 44%);transition:opacity .6s var(--ease,ease)}
+.reise.ist-unterwegs .reise__buehne::before,.reise--statisch .reise__buehne::before{opacity:0}
+.reise__kopf{position:absolute;left:0;right:0;top:calc(var(--kopf-h,72px) + clamp(12px,3vh,32px));z-index:2;pointer-events:none;transition:opacity .6s var(--ease,ease),transform .6s var(--ease,ease)}
+.reise__kopf .h2{max-width:14ch}
+.reise__kopf p{margin-top:12px;max-width:38ch;font-size:1.0625rem}
+.reise.ist-unterwegs .reise__kopf{opacity:0;transform:translateY(-14px)}
+.reise__marken{position:absolute;inset:0;z-index:1;pointer-events:none}
+.reise__marke{position:absolute;left:0;top:0;opacity:0;will-change:transform,opacity}
+.reise__marke > span{position:absolute;left:0;bottom:12px;transform:translateX(-50%);display:grid;justify-items:center;gap:1px;width:max-content;max-width:180px;padding:6px 12px;border-radius:14px;text-align:center;line-height:1.25;background:rgba(255,255,255,.9);box-shadow:0 8px 22px -10px rgba(44,68,92,.4)}
+.reise__marke b{font-size:.9375rem;font-weight:600;color:var(--navy,#2C445C)}
+.reise__marke small{font-size:.75rem;color:var(--anthr,#545250)}
+.reise__marke--gold > span{border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--holo-mittel,linear-gradient(115deg,#9FC0E2,#C3B2E2,#EDB9A5,#D5B57A)) border-box}
+.reise__schritte{position:absolute;left:0;right:0;bottom:clamp(28px,6vh,60px);z-index:3;height:0;margin-block:0}
+.reise__schritt{position:absolute;left:0;bottom:0;width:min(440px,100%);padding:18px 20px 20px;border-radius:24px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 24px 50px -24px rgba(44,68,92,.45);opacity:0;transform:translateY(16px);transition:opacity .55s var(--ease,ease),transform .55s var(--ease,ease);pointer-events:none}
+.reise__schritt.ist-aktiv{opacity:1;transform:none;pointer-events:auto}
+.reise__nr{display:block;font-family:var(--serif,Georgia,serif);font-size:1.0625rem;line-height:1;color:var(--gold-ink,#7E6538)}
+.reise__schritt h3{margin-top:6px;font-family:var(--serif,Georgia,serif);font-weight:400;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.1;color:var(--navy,#2C445C)}
+.reise__schritt p{margin-top:8px;font-size:.9688rem}
+.reise__schritt .btn{margin-top:16px}
+.reise__fortschritt{position:absolute;left:0;right:0;bottom:0;z-index:3;height:3px;background:rgba(44,68,92,.08)}
+.reise__fortschritt i{display:block;height:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#94B6D9,#B9A6D9,#E5A994,#C9A86A)}
+
+/* Hareketi azalt ya da WebGL yok: sabitleme yok, tek kare ve adımların listesi */
+.reise--statisch{height:auto}
+.reise--statisch .reise__buehne{position:relative;height:auto;display:flex;flex-direction:column;padding-block:clamp(72px,9vw,120px) clamp(48px,6vw,80px)}
+.reise--statisch .reise__kopf{position:relative;top:auto;order:-1;opacity:1;transform:none}
+.reise--statisch .reise__scrollhinweis{display:none}
+.reise--statisch .reise__canvas{position:relative;width:min(100% - 32px,1100px);height:auto;aspect-ratio:16/10;margin:28px auto 0;border-radius:28px}
+.reise--statisch .reise__marken,.reise--statisch .reise__fortschritt{display:none}
+.reise--statisch .reise__schritte{position:relative;bottom:auto;height:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:12px;margin-top:24px}
+.reise--statisch .reise__schritt{position:relative;width:auto;opacity:1;transform:none;pointer-events:auto}
+.reise--ohne-3d .reise__canvas{display:none}
+
+@media (max-width:599px){
+  .reise:not(.reise--statisch){height:480vh}
+  .reise__kopf .h2{font-size:clamp(2rem,9vw,2.5rem)}
+  .reise__kopf p{font-size:1rem}
+  .reise__schritte{bottom:calc(84px + env(safe-area-inset-bottom))}
+  .reise__schritt{width:100%;padding:16px 16px 18px}
+  .reise__marke > span{padding:5px 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  .reise__kopf,.reise__schritt{transition:none}
+}
