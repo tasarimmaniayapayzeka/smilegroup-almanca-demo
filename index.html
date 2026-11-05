@@ -18,7 +18,7 @@ header{padding:40px 0 8px}
 header img{width:180px;height:auto;display:block}
 h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4vw,3rem);line-height:1.12;font-weight:600;letter-spacing:-.01em}
 .giris{max-width:62ch;font-size:1.0625rem;margin:0}
-.kartlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:44px 0 28px}
+.kartlar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:44px 0 28px}
 .kart{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cizgi);border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(44,68,92,.4);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
 .kart:hover{transform:translateY(-4px);box-shadow:0 28px 56px -28px rgba(44,68,92,.5)}
 .kart>a{display:block}
@@ -41,8 +41,8 @@ h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4v
 <body>
 <header class="sar"><img src="demo/assets/img/logo.svg" alt="SmileGroup" width="180" height="36"></header>
 <main class="sar">
-  <h1>Almanca satış sayfası: üç tasarım önerisi</h1>
-  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Üç ayrı tasarım var. Her biri implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
+  <h1>Almanca satış sayfası: dört tasarım önerisi</h1>
+  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Dört ayrı tasarım var. Her biri implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
   <div class="kartlar">
     <article class="kart">
       <a href="demo/" aria-label="Demo 1'i aç"><img src="onizleme/demo-1.webp" alt="Demo 1 açılış ekranı" width="960" height="600"></a>
@@ -69,9 +69,19 @@ h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4v
       <div class="kart__icerik">
         <span class="kart__no">Demo 3</span>
         <h2>İnci ve holografik</h2>
-        <p>Açık, holografik tasarım. Hareketli plan kartı, tarama çizgili önce-sonra, Berlin'den Şişli'ye 3B yolculuk, tanıtım filmi ve galeri.</p>
+        <p>Açık, holografik tasarım. Hareketli plan kartı, tarama çizgili önce-sonra, Berlin'den Şişli'ye yolculuk filmi, tanıtım filmi ve galeri.</p>
         <div class="varyant"><span>Reklama göre:</span><a href="demo-3/?t=implantate">İmplant</a><a href="demo-3/?t=all-on-4">All-on-4</a><a href="demo-3/?t=aesthetik">Veneer ve zirkon</a></div>
         <a class="dugme" href="demo-3/">Demoyu aç</a>
+      </div>
+    </article>
+    <article class="kart">
+      <a href="demo-4/" aria-label="Demo 4'ü aç"><img src="onizleme/demo-4.webp" alt="Demo 4 açılış ekranı" width="960" height="600"></a>
+      <div class="kart__icerik">
+        <span class="kart__no">Demo 4</span>
+        <h2>Sade ve gerçek fotoğraflı</h2>
+        <p>Hastane sitesi çizgisinde, sakin bir tasarım. Yalnız kliniğin kendi fotoğrafları; önce-sonra kaydırıcısı, fiyat tablosu, süreç, ekip, tanıtım filmi ve form.</p>
+        <div class="varyant"><span>Reklama göre:</span><a href="demo-4/?t=implantate">İmplant</a><a href="demo-4/?t=all-on-4">All-on-4</a><a href="demo-4/?t=aesthetik">Veneer ve zirkon</a></div>
+        <a class="dugme" href="demo-4/">Demoyu aç</a>
       </div>
     </article>
   </div>
