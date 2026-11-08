@@ -35,14 +35,22 @@ h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4v
 .varyant a:hover{border-color:var(--altin)}
 .not{margin:0 0 48px;padding:18px 20px;border-radius:16px;background:var(--bej);font-size:.9375rem;max-width:80ch}
 .not b{color:var(--lacivert)}
+.kart--genis{grid-column:1/-1}
+@media (min-width:961px){
+  .kart--genis{flex-direction:row;align-items:stretch}
+  .kart--genis>a{flex:0 0 56%}
+  .kart--genis img{border-bottom:0;border-right:1px solid var(--cizgi)}
+  .kart--genis .kart__icerik{justify-content:center;padding:28px 32px}
+  .kart--genis .dugme{margin-top:8px;align-self:flex-start}
+}
 @media (max-width:960px){.kartlar{grid-template-columns:1fr;max-width:560px}}
 </style>
 </head>
 <body>
 <header class="sar"><img src="demo/assets/img/logo.svg" alt="SmileGroup" width="180" height="36"></header>
 <main class="sar">
-  <h1>Almanca satış sayfası: dört tasarım önerisi</h1>
-  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Dört ayrı tasarım var. Her biri implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
+  <h1>Almanca satış sayfası: beş tasarım önerisi</h1>
+  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Beş ayrı tasarım var. İlk dördü implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
   <div class="kartlar">
     <article class="kart">
       <a href="demo/" aria-label="Demo 1'i aç"><img src="onizleme/demo-1.webp" alt="Demo 1 açılış ekranı" width="960" height="600"></a>
@@ -82,6 +90,15 @@ h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4v
         <p>Hastane sitesi çizgisinde, sakin bir tasarım. Yalnız kliniğin kendi fotoğrafları; önce-sonra kaydırıcısı, fiyat tablosu, süreç, ekip, tanıtım filmi ve form.</p>
         <div class="varyant"><span>Reklama göre:</span><a href="demo-4/?t=implantate">İmplant</a><a href="demo-4/?t=all-on-4">All-on-4</a><a href="demo-4/?t=aesthetik">Veneer ve zirkon</a></div>
         <a class="dugme" href="demo-4/">Demoyu aç</a>
+      </div>
+    </article>
+    <article class="kart kart--genis">
+      <a href="demo-5/" aria-label="Demo 5'i aç"><img src="onizleme/demo-5.webp" alt="Demo 5 açılış ekranı" width="960" height="600"></a>
+      <div class="kart__icerik">
+        <span class="kart__no">Demo 5</span>
+        <h2>Doğal ve sıcak</h2>
+        <p>Gerçek hasta fotoğraflarıyla sade ve sıcak bir tasarım. Girişte kısa form, önce-sonra kaydırıcısı, hasta hikâyeleri ve klinik filmi, ekip, Google yorumları ve tedavi listesi.</p>
+        <a class="dugme" href="demo-5/">Demoyu aç</a>
       </div>
     </article>
   </div>
