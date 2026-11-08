@@ -35,14 +35,22 @@ h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4v
 .varyant a:hover{border-color:var(--altin)}
 .not{margin:0 0 48px;padding:18px 20px;border-radius:16px;background:var(--bej);font-size:.9375rem;max-width:80ch}
 .not b{color:var(--lacivert)}
+.kart--genis{grid-column:1/-1}
+@media (min-width:961px){
+  .kart--genis{flex-direction:row;align-items:stretch}
+  .kart--genis>a{flex:0 0 56%}
+  .kart--genis img{border-bottom:0;border-right:1px solid var(--cizgi)}
+  .kart--genis .kart__icerik{justify-content:center;padding:28px 32px}
+  .kart--genis .dugme{margin-top:8px;align-self:flex-start}
+}
 @media (max-width:960px){.kartlar{grid-template-columns:1fr;max-width:560px}}
 </style>
 </head>
 <body>
 <header class="sar"><img src="demo/assets/img/logo.svg" alt="SmileGroup" width="180" height="36"></header>
 <main class="sar">
-  <h1>Almanca satış sayfası: altı tasarım önerisi</h1>
-  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Altı ayrı tasarım var. İlk dördü implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
+  <h1>Almanca satış sayfası: yedi tasarım önerisi</h1>
+  <p class="giris">Almanya'dan gelecek hastalar için hazırlanan reklam sayfası. Yedi ayrı tasarım var. İlk dördü implant, All-on-4 ve veneer reklamlarına göre içeriğini değiştirir.</p>
   <div class="kartlar">
     <article class="kart">
       <a href="demo/" aria-label="Demo 1'i aç"><img src="onizleme/demo-1.webp" alt="Demo 1 açılış ekranı" width="960" height="600"></a>
@@ -100,6 +108,15 @@ h1{margin:36px 0 10px;color:var(--lacivert);font-size:clamp(1.9rem,1.2rem + 2.4v
         <h2>Net ve fiyat odaklı</h2>
         <p>İmplant reklamları için lacivert-altın tasarım. Fiyatlı implant seçenekleri, Almanya ile karşılaştırma, kayan önce-sonra ve yorum şeritleri, adım adım süreç, ekip ve klinik galerisi.</p>
         <a class="dugme" href="demo-6/">Demoyu aç</a>
+      </div>
+    </article>
+    <article class="kart kart--genis">
+      <a href="demo-7/" aria-label="Demo 7'yi aç"><img src="onizleme/demo-7.webp" alt="Demo 7 açılış ekranı" width="960" height="600"></a>
+      <div class="kart__icerik">
+        <span class="kart__no">Demo 7</span>
+        <h2>Modern ve hareketli</h2>
+        <p>Siyah-beyaz zeminde altın vurgular. Kayan ekip ve hasta fotoğrafları, "Über uns" kart destesi, S-M-I-L-E adımlarıyla tedavi yolculuğu, fiyatlı tedavi kartları, hasta hikâyeleri ve önce-sonra kaydırıcısı.</p>
+        <a class="dugme" href="demo-7/">Demoyu aç</a>
       </div>
     </article>
   </div>
